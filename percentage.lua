@@ -17,6 +17,9 @@ local function getpercent(name)
 		if l == "e" then
 			perc += .025
 		end
+		if tonumber(l) or l == "_" then
+			perc -= .05
+		end
 	end
 	return perc * 100
 end
